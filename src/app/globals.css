@@ -15,7 +15,6 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -26,6 +25,10 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {

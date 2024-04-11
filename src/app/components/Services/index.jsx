@@ -34,13 +34,13 @@ const Services = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
     <>
+      {/**to-[#111827] **/}
       <motion.div
-        className="flex flex-col h-full justify-between bg-gradient-to-b from-[#0c0c1d]"
+        className="flex flex-col h-full justify-between bg-gradient-to-b from-[#0c0c1d]  "
         variants={variants}
         initial="initial"
         ref={ref}
         animate={isInView && "animate"}>
-        {/*** to-[#111827] **/}
         <motion.div
           className="flex-1 flex self-end items-center gap-[20px] "
           variants={variants}>

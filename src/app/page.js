@@ -25,7 +25,12 @@ const Services = dynamic(() => import("./components/Services/index.jsx"), {
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen w-full z-1 ">
+    <div
+      className="flex flex-col h-screen w-full z-1"
+      style={{
+        scrollbarWidth: "none",
+        scrollbarColor: "transparent transparent",
+      }}>
       <ParticleBackground />
 
       <div className="flex flex-col w-full z-10 items-center justify-center">
