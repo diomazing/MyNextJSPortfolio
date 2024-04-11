@@ -1,8 +1,7 @@
 const Section = ({ children, id }) => {
-  console.log("ID", id);
   return (
     <section
-      className="h-[100vh] w-full"
+      className="h-[100vh] w-full overflow-auto"
       style={{
         scrollSnapAlign: "center",
         backgroundColor: "rgba(0, 0, 0, 0.5)",

@@ -48,7 +48,7 @@ export const defaultParticles = {
         mode: "trail",
         parallax: {
           enable: false,
-          force: 2,
+          force: 15,
           smooth: 10,
         },
       },
@@ -588,8 +588,8 @@ export const multiplePolygonMask = {
         mode: "repulse",
         parallax: {
           enable: true,
-          force: 5,
-          smooth: 25,
+          force: 15,
+          smooth: 50,
         },
       },
       resize: {
@@ -830,7 +830,7 @@ export const multiplePolygonMask = {
         mode: "delete",
         value: 0,
       },
-      value: 200,
+      value: 300,
     },
     opacity: {
       value: 0.5,
@@ -867,7 +867,7 @@ export const multiplePolygonMask = {
     size: {
       value: {
         min: 1,
-        max: 3,
+        max: 5,
       },
       animation: {
         count: 0,

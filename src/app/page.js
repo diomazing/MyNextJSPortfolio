@@ -15,15 +15,17 @@ const Hero = dynamic(() => import("./components/Hero/index.jsx"), {
   ssr: false,
 });
 
+const Parallax = dynamic(() => import("./components/Parallax/index.jsx"), {
+  ssr: false,
+});
+
+const Services = dynamic(() => import("./components/Services/index.jsx"), {
+  ssr: false,
+});
+
 export default function Home() {
   return (
-    <div
-      className="flex flex-col h-screen w-full z-1 overflow-y-auto"
-      style={{
-        scrollSnapType: "y mandatory",
-        scrollBehavior: "smooth",
-        fontFamily: "DM Sans, sans-serif",
-      }}>
+    <div className="flex flex-col h-screen w-full z-1 ">
       <ParticleBackground />
 
       <div className="flex flex-col w-full z-10 items-center justify-center">
@@ -32,13 +34,13 @@ export default function Home() {
           <Hero />
         </Section>
         <Section id="Parallax">
-          <h1 className="text-2xl font-extrabold text-white">Parallax</h1>{" "}
+          <Parallax type="services" />
         </Section>
         <Section id="Services">
-          <h1 className="text-2xl font-extrabold text-white">Services</h1>{" "}
+          <Services />
         </Section>
-        <Section>
-          <h1 className="text-2xl font-extrabold text-white">Portfolio</h1>{" "}
+        <Section id="Portfolio">
+          <Parallax type="portfolio" />
         </Section>
         <Section>
           <h1 className="text-2xl font-extrabold text-white">Contact</h1>{" "}

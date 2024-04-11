@@ -104,12 +104,7 @@ const Hero = () => {
           </motion.div>
         </div>
         <div className="absolute h-full top-0 right-0">
-          <Image
-            src={"/hero.png"}
-            width={1300}
-            height={1300}
-            alt="My Picture"
-          />
+          <Image src={"/hero.png"} width={950} height={950} alt="My Picture" />
         </div>
       </div>
     </>
