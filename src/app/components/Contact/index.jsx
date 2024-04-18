@@ -33,10 +33,10 @@ const Contact = () => {
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
-        NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
         formref.current,
         {
-          publicKey: NEXT_PUBLIC_EMAIL_JS_PUBLIC_ID,
+          publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_ID,
         }
       )
       .then(
