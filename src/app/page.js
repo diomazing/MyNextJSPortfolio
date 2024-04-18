@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import ParticleBackground from "./components/ParticleBackground";
 import dynamic from "next/dynamic";
@@ -23,6 +24,14 @@ const Services = dynamic(() => import("./components/Services/index.jsx"), {
   ssr: false,
 });
 
+const Portfolio = dynamic(() => import("./components/Portfolio/index.jsx"), {
+  ssr: false,
+});
+
+const Contact = dynamic(() => import("./components/Contact/index.jsx"), {
+  ssr: false,
+});
+
 export default function Home() {
   return (
     <div
@@ -32,13 +41,12 @@ export default function Home() {
         scrollbarColor: "transparent transparent",
       }}>
       <ParticleBackground />
-
       <div className="flex flex-col w-full z-10 items-center justify-center">
-        <Section id="Hopemage">
+        <Section id="#">
           <Navbar />
           <Hero />
         </Section>
-        <Section id="Parallax">
+        <Section>
           <Parallax type="services" />
         </Section>
         <Section id="Services">
@@ -47,10 +55,10 @@ export default function Home() {
         <Section id="Portfolio">
           <Parallax type="portfolio" />
         </Section>
-        <Section>
-          <h1 className="text-2xl font-extrabold text-white">Contact</h1>{" "}
+        <Portfolio />
+        <Section id="Contact">
+          <Contact />
         </Section>
-        <h1 className="text-2xl font-extrabold text-white">HELLO WORLD</h1>{" "}
       </div>
     </div>
   );

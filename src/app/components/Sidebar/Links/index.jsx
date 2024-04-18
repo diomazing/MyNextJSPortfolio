@@ -28,13 +28,14 @@ const Links = () => {
       opacity: 0,
     },
   };
+
   return (
     <motion.div
       className="flex flex-col text-[40px] absolute w-full h-full items-center justify-center gap-5"
       variants={variants}>
       {items.map((item) => (
         <motion.a
-          href={`#${item}`}
+          href={`${item === "Homepage" ? "#" : `#${item}`}`}
           key={item}
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
