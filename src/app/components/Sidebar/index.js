@@ -21,7 +21,7 @@ const Sidebar = () => {
       className="relative flex flex-col justify-center items-center bg-white text-black z-20"
       animate={open ? "open" : "closed"}>
       <motion.div
-        className="fixed top-0 left-0 bottom-0 w-[400px] bg-white"
+        className="fixed top-0 left-0 bottom-0 w-full bg-white md:w-[400px]"
         variants={variants}>
         <Links />
       </motion.div>

@@ -32,11 +32,17 @@ const Contact = dynamic(() => import("./components/Contact/index.jsx"), {
   ssr: false,
 });
 
+const Cursor = dynamic(() => import("./components/Cursor/index.jsx"), {
+  ssr: false,
+});
+
 export default function Home() {
   return (
     <div
       className="flex flex-col h-screen w-full z-1"
       style={{
+        scrollSnapAlign: "center",
+        scrollBehavior: "smooth",
         scrollbarWidth: "none",
         scrollbarColor: "transparent transparent",
       }}>
@@ -46,10 +52,10 @@ export default function Home() {
           <Navbar />
           <Hero />
         </Section>
-        <Section>
+        {/* <Section id="Services">
           <Parallax type="services" />
         </Section>
-        <Section id="Services">
+        <Section>
           <Services />
         </Section>
         <Section id="Portfolio">
@@ -58,8 +64,9 @@ export default function Home() {
         <Portfolio />
         <Section id="Contact">
           <Contact />
-        </Section>
+        </Section> */}
       </div>
+      <Cursor />
     </div>
   );
 }

@@ -39,6 +39,10 @@ const Parallax = ({ type }) => {
           ? "bg-gradient-to-b from-[#111827] to-[#0c0c1d]"
           : "bg-gradient-to-b from-[#111827] to-[#505064]"
       )}
+      style={{
+        // scrollSnapAlign: "center",
+        scrollBehavior: "smooth",
+      }}
       ref={ref}>
       <motion.h1
         className="text-[8em] font-bold z-[2]"

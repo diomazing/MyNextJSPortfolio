@@ -32,15 +32,7 @@ const Single = ({ item }) => {
   const yUpAnimate = useTransform(scrollYProgress, [0, 1], [-500, 500]);
 
   return (
-    <section
-      className="h-[100vh] w-full overflow-auto"
-      style={{
-        scrollSnapAlign: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        color: "lightgray",
-        textDecoration: "none",
-        textDecorationColor: "inherit",
-      }}>
+    <Section>
       <div className="flex items-center justify-center h-full w-full overflow-hidden">
         <div className="flex flex-row items-center justify-center gap-12 max-w-[1366px] h-full m-auto px-[10%]">
           <div className="flex-1 h-[50%]" ref={ref}>
@@ -61,7 +53,7 @@ const Single = ({ item }) => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 const Portfolio = () => {

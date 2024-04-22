@@ -9,15 +9,15 @@ const Navbar = () => {
   return (
     <div className="relative h-[100px] max-w-[1366px] m-auto items-center z-10">
       <Sidebar />
-      <div className="flex flex-row justify-between p-5">
+      <div className="flex flex-row justify-end p-5 md:justify-between">
         <motion.span
           intial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1.5 }}
           transition={{ duration: 0.5 }}
-          className="font-bold">
+          className="font-bold mt-5 hidden md:inline md:ml-10">
           DIOMAZING
         </motion.span>
-        <div className="socials">
+        <div className="socials mt-5">
           <div className="flex flex-row gap-2">
             <a
               href="https://www.facebook.com/james.sia.75"

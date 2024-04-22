@@ -41,20 +41,20 @@ const sliderVariants = {
 const Hero = () => {
   return (
     <>
-      <div className="relative h-[calc(100vh-100px)] bg-gradient-to-b from-transparent to-gray-900 overflow-hidden">
-        <div className="flex max-w-[1366px] h-full m-auto ">
+      <div className="relative h-[calc(100vh-100px)] bg-gradient-to-b from-transparent to-gray-900 overflow-hidden ">
+        <div className="flex w-full h-[50%] m-auto lg:max-w-[1366px] lg:h-[100%]">
           <motion.div
-            className="flex flex-col justify-center h-full w-[50%] gap-5"
+            className="flex flex-col items-center justify-center h-full w-full gap-5 lg:items-start  lg:w-[50%] "
             variants={textVariants}
             initial="intial"
             animate="animate">
             <motion.h2
-              className="text-[30px] font-bold text-violet-700 tracking-[10px]"
+              className=" text-[20px] font-bold text-violet-700 lg:text-[30px] lg:tracking-[10px]"
               variants={textVariants}>
               JAMES SIA
             </motion.h2>
             <motion.h1
-              className="text-[88px] font-bold text-white leading-none"
+              className="text-[44px] font-bold text-white text-center leading-none lg:text-[88px] lg:text-left"
               variants={textVariants}>
               Developer. Engineer. Editor.
             </motion.h1>
@@ -103,8 +103,14 @@ const Hero = () => {
             </motion.div>
           </motion.div>
         </div>
-        <div className="absolute h-full top-0 right-0">
-          <Image src={"/hero.png"} width={950} height={950} alt="My Picture" />
+        <div className="absolute h-[50%] right-0 lg:h-full lg:top-0 ">
+          <Image
+            src={"/hero.png"}
+            width={950}
+            height={950}
+            alt="My Picture"
+            className="mt-[25%] lg:mt-0"
+          />
         </div>
       </div>
     </>
