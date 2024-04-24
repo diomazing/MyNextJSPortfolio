@@ -106,8 +106,8 @@ const Hero = () => {
         <div className="absolute h-[50%] right-0 lg:h-full lg:top-0 ">
           <Image
             src={"/hero.png"}
-            width={950}
-            height={950}
+            width={850}
+            height={850}
             alt="My Picture"
             className="mt-[25%] lg:mt-0"
           />

@@ -52,7 +52,7 @@ export default function Home() {
           <Navbar />
           <Hero />
         </Section>
-        {/* <Section id="Services">
+        <Section id="Services">
           <Parallax type="services" />
         </Section>
         <Section>
@@ -64,7 +64,7 @@ export default function Home() {
         <Portfolio />
         <Section id="Contact">
           <Contact />
-        </Section> */}
+        </Section>
       </div>
       <Cursor />
     </div>
